@@ -14,12 +14,11 @@ import Component2 from "./component/contents2";
 import Calculator from "./component/calculator/calculator";
 
 const Layout = () => {
-  const locate = useLocation();
+  const locate = useLocation(); //해당 url의 정보를 알기위해서 사용
   console.log(locate);
 
   return (
     <>
-      {/*!locate.pathname.includes("/component2") && <Header />*/}
       {!locate.pathname.includes("/component2") && <Header />}
       <Routes>
         <Route exact path="/component1" element={<Component1 />} />
